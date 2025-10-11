@@ -1,0 +1,11 @@
+# A first workflow to play with editor
+name: My First Workflow
+on:
+  push:
+     branches: 
+       - main
+  workflow_dispatch:
+    inputs:
+      first_job:
+        
+     
