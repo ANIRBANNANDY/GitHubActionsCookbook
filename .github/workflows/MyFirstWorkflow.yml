@@ -5,7 +5,14 @@ on:
      branches: 
        - main
   workflow_dispatch:
-    inputs:
-      first_job:
-        
-     
+jobs:
+  first_job:
+    name: My First Job
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+         echo "Hello world from ${{ github.actor }}."
+         echo "Current branch is '${{ github.ref }}'."
+      - name: Checkout
+        uses: actions/checkout@v5.0.0
+      - run: tree
